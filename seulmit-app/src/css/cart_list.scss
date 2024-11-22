@@ -1,0 +1,77 @@
+// 슬밋pj - 카트목록 css
+//임시로 검색 css 넣어둠
+
+@import "./variables/variables";
+
+.cart-list {
+    //공통 설정
+    padding: 40px;
+
+    background-color: #fff;
+    position: fixed;
+    width: 50vw;
+    height: 100vh;
+    top: 0;
+    // right: 0;
+    right: -72vw;
+    z-index: 9999;
+
+    button.close-btn {
+        border: transparent;
+        background: transparent;
+        cursor: pointer;
+        span {
+            font-size: 50px;
+        }
+    }
+
+  
+
+    
+}
+  //테이블css
+  table{
+    font-size: 16px;
+    font-weight: 200;
+    width: 100%;
+    .btn-buy{
+        font-size: 20px;
+        font-weight: 200;
+        position: absolute;
+        width: 90%;
+        bottom: 13%;
+        height: 70px;
+    }
+    caption{
+        text-align: left;
+        font-size: 30px;
+        margin-bottom: 20px;
+        span{
+            font-size: 16px;
+        }
+    }
+    .img-bx {
+        width: 30%;
+        img {
+            width: 100%;
+        }
+    }
+    
+} 
+
+.total-price{
+    font-size: 15px;
+    margin-bottom: 20px;
+    span{
+        font-size: 25px;
+    }
+}
+
+#product-cont{
+
+    select {
+        width: 100%;
+        height: 50px;
+        padding: 5px;
+    }
+}

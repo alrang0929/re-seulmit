@@ -1,0 +1,65 @@
+///슬밋pj 회원가입 css
+@import "./variables/variables";
+
+.outbox {
+  background: url(../../public/images/login_BG.jpg);
+  padding: 40px;
+  .membx {
+    margin: 0 auto;
+    min-height: 60vh;
+    max-width: 700px;
+    padding: 50px;
+    border: 1px solid hsl(0, 0%, 33%);
+    background-color: #fff;
+    h3 {
+      text-align: center;
+      font-size: $fontsize-title4;
+      margin-top: 20px;
+    }
+    .user-data {
+      padding: 20px;
+      li {
+        margin-bottom: 15px;
+        font-size: $fontsize2;
+        input {
+          margin-top: 10px;
+          width: 100%;
+          height: 25px;
+          margin-left: -1px;
+        }
+      }
+    }
+    //약관동의 박스
+    .termsbx {
+      text-align: center;
+      label {
+        font-size: $fontsize2;
+      }
+      .terms-text {
+
+        border: 1px solid #c8c8c8;
+        padding: 15px;
+        box-sizing: border-box;
+
+        overflow-x: hidden;
+        height: 20vh;
+        width: 100%;
+        margin: 20px 0;
+
+        font-size: 13px;
+        color: #777;
+        line-height: 1.5;
+      }
+      button {
+        width: 40%;
+        margin: 20px 10px;
+      }
+    }
+    .login-msg{
+      font-size: $fontsize2;
+      a{
+        color: $PointColor2;
+      }
+    }
+  }
+}

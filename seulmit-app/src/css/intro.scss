@@ -1,0 +1,138 @@
+//2차 프로젝트 슬밋 인트로 SCSS
+@import "./variables/variables";
+////import area//////////////////////////////////
+
+:root {
+  --font-title: "miller-display", serif;
+  --section-margin: 100px;
+  --fx-menu-gap: 0 20px;
+  --margin-top-text: 20px;
+  --margin-top-40: 40px;
+  --padding110: 110px;
+  --line-height: 1.7;
+}
+
+html, body{
+  // overflow-x: hidden;
+  
+}
+
+.scbar-display-none{
+  
+  ::-webkit-scrollbar{
+    display: none;
+  }
+}
+
+//인트로 영역
+#intro-area {
+  // ::-webkit-scrollbar	스크롤바 전체
+  // ::-webkit-scrollbar-thumb	스크롤 막대
+  // ::-webkit-scrollbar-track	스크롤 막대 외부
+
+  position: fixed;
+  z-index: 9999999999;
+  width: 100vw;
+  height: 100vh;
+  top: 0;
+  left: 0;
+
+  overflow: hidden;
+  background-color: #000;
+
+.click-text{
+ 
+margin-top: 40px;
+  font-size: 14px;
+  font-weight: 200;
+  color: #fff;
+
+  opacity: 1;
+  animation: textOploop 2.8s linear infinite;
+}
+
+@keyframes textOploop {
+  0%{
+    opacity: 1;
+  }
+  50%{
+    opacity: .5;
+  }
+  100%{
+    opacity: 1;
+  }
+}
+
+  .cont-wrap {
+    position: absolute;
+    left: 50%;
+    top: 40%;
+    translate: -50% -50%;
+    width: 10%;
+    span {
+      margin: 0 auto;
+      width: 20%;
+      display: block;
+      margin-bottom: 50px;
+      img {
+        width: 100%;
+      }
+    }
+
+    .desc {
+      position: absolute;
+
+      width: 280%;
+
+      left: 50%;
+      top: 139%;
+      // top: 128%;
+      translate: -50% -50%;
+
+      text-align: center;
+      font-weight: 200;
+      line-height: var(--line-height);
+      font-size: $fontsize1;
+      color: $FontColor3;
+    }
+  } //// cont-wrap
+  .loading {
+    position: absolute;
+    left: 50%;
+    top: 150%;
+    translate: -50% -50%;
+
+    // width: 550px;
+    height: 1px;
+
+    background-color: #fff;
+  }
+
+  .bg {
+    z-index: -1;
+    object-fit: fill;
+    opacity: 1;
+    position: relative;
+    height: 100vh;
+    // background-image: url(../images/intro_BG.jpg);
+    // background-size: 100% 100%;
+    background-position: center;
+    background-repeat: no-repeat;
+  }
+} ///////intro-area-end
+
+//////media///////////////////////////////////
+@media screen and (max-width: 900px) {
+
+  #intro-area{
+    .cont-wrap{
+      width: 27%;
+
+      .desc{
+        top: 154%;
+      }
+    }
+  }
+
+
+}///900

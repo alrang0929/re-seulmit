@@ -1,0 +1,109 @@
+/// swiper css - prd list
+
+
+@import "../../../css/variables/variables";
+:root {
+  --font-title: "miller-display", serif;
+  --section-margin: 100px;
+  --fx-menu-gap: 0 20px;
+  --margin-top-text: 20px;
+  --margin-top-40: 40px;
+  --padding110: 110px;
+  --line-height: 1.7;
+}
+
+
+////swiper
+.swiper-wrapper {
+  transition-timing-function: linear;
+}
+
+.swiper-horizontal > .swiper-scrollbar, .swiper-scrollbar.swiper-scrollbar-horizontal{
+  bottom: -10%;
+}
+
+
+////////////////////////////////////////////////////////////////////////////
+#prd-list {
+  .swiper {
+    overflow: visible;
+    height: auto;
+    margin: 0 20px;
+
+    .item {
+      flex-shrink: 0;
+      // margin: 0 10px;
+      // width: calc(100% / 4);
+      padding: 20px;
+      box-sizing: border-box;
+      transition: 0.2s;
+      height: auto;
+      border: 1px solid transparent;
+      
+      &:hover {
+        z-index: 1;
+        scale: 1.05;
+        box-shadow: 40px 40px 40px #00000010;
+        border: 1px solid $FontColor1;
+      }
+      .img-wrap {
+        height: auto;
+        position: relative;
+
+        //이미지 공통사항
+        img {
+          width: 100%;
+        }
+
+        .imgbx {
+          width: 100%;
+          height: auto;
+          opacity: 1;
+          transition: opacity 0.2s;
+
+          &:hover {
+            opacity: 0;
+          }
+        } /////imgbx
+        .blur {
+          z-index: -1;
+          position: absolute;
+          top: 0;
+          left: 0;
+        } //호버시 보이는 이미지
+
+      } //img-wrap
+
+      //텍스트 설정
+      .desc-wrap {
+        width: 90%;
+        .eng-pdtit {
+          color: $FontColor2;
+          font-size: $fontsize2;
+        }
+        .kor-pdtit {
+          color: $FontColor1;
+          font-size: $fontsize-title3;
+          font-weight: 600;
+
+          margin-top: var(--margin-top-text);
+        }
+
+        .desc {
+          font-size: $fontsize2;
+          line-height: 1.5;
+          margin: var(--margin-top-text) 0;
+          margin-bottom: 40px;
+        }
+      } //desc wrap
+    } //item
+  } //slider
+} //prd-list end
+
+
+////midea/////////////////////////////
+@media screen and (max-width: 900px) {
+  .swiper-horizontal > .swiper-scrollbar, .swiper-scrollbar.swiper-scrollbar-horizontal{
+    bottom: 0%;
+  }
+}

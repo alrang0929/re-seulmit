@@ -1,0 +1,53 @@
+{
+  "homepage": "https://alrang0929.github.io/FED-RF-2th-PJ-jihyeon/2차 프로젝트/03.구현소스/seulmit-app/build",
+  "name": "seulmit-app",
+  "version": "0.1.0",
+  "private": true,
+  "dependencies": {
+    "@drumloch/someplugin": "^3.0.1",
+    "@testing-library/jest-dom": "^5.17.0",
+    "@testing-library/react": "^13.4.0",
+    "@testing-library/user-event": "^13.5.0",
+    "ci": "^2.3.0",
+    "jquery": "^3.7.1",
+    "jquery-ui-dist": "^1.13.3",
+    "jquery-ui-touch-punch": "^0.2.3",
+    "postcss-scss": "^4.0.9",
+    "react": "^18.3.1",
+    "react-dom": "^18.3.1",
+    "react-js-pagination": "^3.0.3",
+    "react-modal": "^3.16.1",
+    "react-router-dom": "^6.23.1",
+    "react-scripts": "5.0.1",
+    "react-select": "^5.8.0",
+    "recoil": "^0.7.7",
+    "sass": "^1.77.4",
+    "styled-components": "^6.1.11",
+    "swiper": "^11.1.4",
+    "web-vitals": "^2.1.4"
+  },
+  "scripts": {
+    "start": "react-scripts start",
+    "build": "react-scripts build",
+    "test": "react-scripts test",
+    "eject": "react-scripts eject"
+  },
+  "eslintConfig": {
+    "extends": [
+      "react-app",
+      "react-app/jest"
+    ]
+  },
+  "browserslist": {
+    "production": [
+      ">0.2%",
+      "not dead",
+      "not op_mini all"
+    ],
+    "development": [
+      "last 1 chrome version",
+      "last 1 firefox version",
+      "last 1 safari version"
+    ]
+  }
+}

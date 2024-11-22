@@ -1,0 +1,130 @@
+//2차 프로젝트 슬밋 메인 CSS - main.scss
+@import "./common/common";
+@import "./common/grid_12_flex";
+@import "./common/reset";
+@import "./common/core";
+
+@import "./variables/variables";
+@import "./variables/bg_src";
+////import area//////////////////////////////////
+
+:root {
+  --font-title: "miller-display", serif;
+  --section-margin: 100px;
+  --fx-menu-gap: 0 20px;
+  --margin-top-text: 20px;
+  --margin-top-40: 40px;
+  --padding110: 110px;
+  --line-height: 1.7;
+}
+
+/////메인영역
+body{
+  overflow-x: hidden;
+}
+main {
+  #sub-visual {
+    height: 90vh;
+    translate: 0 -2%;
+
+    ul {
+      height: 140vh;
+      grid-template-columns: repeat(4, 1fr);
+
+      li {
+        transform-origin: 50% 50%;
+        cursor: pointer;
+        .desc-wrap,
+        a {
+          // display: none;
+          opacity: 0;
+          position: absolute;
+          left: 50%;
+          top: 50%;
+          translate: -50% -50%;
+          text-align: center;
+
+          .category {
+            tab-size: $fontsize1;
+            color: $FontColor1;
+          }
+          .tit {
+            margin-bottom: 30px;
+            font-family: var(--font-title);
+            font-size: $fontsize-title1;
+          }
+          .desc {
+            margin-top: $text-margin-40;
+            font-size: $fontsize1;
+            line-height: var(--line-height);
+          }
+        }
+
+        background-size: 100%;
+        &:hover {
+          .desc-wrap,
+          a {
+            // display: inline-block;
+            opacity: 1;
+          }
+          background-size: 200%;
+          transition: background-size 10s, opacity 0.4s;
+        }
+      }
+      .sub-main-box {
+        grid-area: -2 / 1 / 2 / 3;
+        position: relative;
+      }
+    } /////subvisual_L
+    .sub-box {
+      position: relative;
+      > a {
+        position: absolute;
+        left: 50%;
+        top: 50%;
+        translate: -50% -50%;
+
+        font-size: $fontsize1;
+      }
+    }
+
+    img {
+      width: 100%;
+    }
+  }
+
+  /* 상품추천 리스트 */
+  #prd-list {
+    padding: 50px 0;
+
+    .desc-box {
+      text-align: center;
+      padding: 60px 0;
+      .tit {
+        margin-bottom: 20px;
+        font-family: var(--font-title);
+        font-size: $fontsize-title1;
+      }
+      .desc {
+        font-size: $fontsize1;
+      }
+    }
+  } //prd-list end
+} //////////////////main
+
+////midea/////////////////////////////
+@media screen and (max-width: 900px) {
+  main {
+    #sub-visual {
+      height: 108vh;
+      ul {
+       li{
+        .desc-wrap,a{
+          opacity: 1;
+        }
+       }
+        grid-template-columns: repeat(2, 2fr);
+      }
+    }
+  }
+}
